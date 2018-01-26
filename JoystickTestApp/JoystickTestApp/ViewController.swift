@@ -32,10 +32,12 @@ class ViewController: UIViewController {
                                                     y: (rect.height - size.height - 40.0)),
                                     size: size)
         let joystick1 = JoyStickView(frame: joystick1Frame)
-        joystick1.monitor = { angle, displacement in
-            self.leftTheta.text = "\(angle)"
-            self.leftMagnitude.text = "\(displacement)"
-        }
+//        joystick1.monitor = { angle, displacement in
+//            self.leftTheta.text = "\(angle)"
+//            self.leftMagnitude.text = "\(displacement)"
+//        }
+        
+        joystick1.delegate = self
 
         view.addSubview(joystick1)
 
@@ -67,5 +69,14 @@ class ViewController: UIViewController {
     }
 
 
+}
+
+extension ViewController: JoystickDelegate {
+    func handleJoyStick(angle: CGFloat, displacement: CGFloat) {
+        self.leftTheta.text = "\(angle)"
+        self.leftMagnitude.text = "\(displacement)"
+    }
+    
+    
 }
 

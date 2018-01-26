@@ -1,6 +1,14 @@
 import UIKit
 import CoreGraphics
 
+
+protocol JoystickDelegate: class {
+    
+    func handleJoyStick(angle: CGFloat, displacement: CGFloat)
+    
+}
+
+
 /**
  Type definition for a function that will receive updates from the JoyStickView when the handle moves. Takes two
  values, both CGFloats.
@@ -30,6 +38,8 @@ public typealias JoyStickViewMonitor = (_ angle: CGFloat, _ displacement: CGFloa
  */
 public final class JoyStickView: UIView {
 
+    var delegate: JoystickDelegate?
+    
     // override class var requiresConstraintBasedLayout: Bool { return true }
 
     /// Holds a function to call when joystick orientation changes
@@ -295,7 +305,8 @@ public final class JoyStickView: UIView {
             // Convert to degrees: 0° is up, 90° is right, 180° is down and 270° is left
             //
             self.angle = newClampedDisplacement != 0.0 ? CGFloat(180.0 - newAngleRadians * 180.0 / Float.pi) : 0.0
-            monitor?(angle, displacement)
+//            monitor?(angle, displacement)
+            self.delegate?.handleJoyStick(angle: angle, displacement: displacement)
         }
     }
 }

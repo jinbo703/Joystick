@@ -120,7 +120,7 @@
 				TargetAttributes = {
 					1495BCEA1F4F736E00B2C738 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = Z7R62JH5A8;
+						DevelopmentTeam = M89857WV7K;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -295,10 +295,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Z7R62JH5A8;
+				DEVELOPMENT_TEAM = M89857WV7K;
 				INFOPLIST_FILE = JoystickTestApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.brhcode.JoystickTestApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.caesar.spacein;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -308,10 +308,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Z7R62JH5A8;
+				DEVELOPMENT_TEAM = M89857WV7K;
 				INFOPLIST_FILE = JoystickTestApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.brhcode.JoystickTestApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.caesar.spacein;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -336,6 +336,7 @@
 				1495BCFF1F4F736F00B2C738 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
